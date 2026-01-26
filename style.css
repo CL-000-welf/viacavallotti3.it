@@ -130,3 +130,46 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     .hero-content h1 { font-size: 52px; }
     .fashion-title { font-size: 52px; }
 }
+/* --- OTTIMIZZAZIONE MOBILE --- */
+@media (max-width: 768px) {
+    /* Ridimensiona logo header su mobile */
+    .logo img {
+        max-height: 50px; /* Regola questo valore se lo vuoi ancora più piccolo */
+        width: auto;
+    }
+
+    /* Centra tutto nel footer su mobile */
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra il logo del footer */
+    }
+
+    .footer-brand img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-socials {
+        justify-content: center; /* Centra le icone social */
+        margin-top: 15px;
+    }
+
+    .footer-links ul {
+        padding: 0;
+        list-style: none;
+    }
+    
+    /* Centra anche il testo in basso */
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 10px;
+    }
+}
