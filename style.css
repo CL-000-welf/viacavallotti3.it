@@ -134,7 +134,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 @media (max-width: 768px) {
     /* Ridimensiona logo header su mobile */
     .logo img {
-        max-height: 50px; /* Regola questo valore se lo vuoi ancora più piccolo */
+        max-height: 30px; /* Regola questo valore se lo vuoi ancora più piccolo */
         width: auto;
     }
 
