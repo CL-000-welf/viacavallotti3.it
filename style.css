@@ -173,3 +173,41 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
         padding: 20px 10px;
     }
 }
+/* --- OTTIMIZZAZIONE SOLO MOBILE (Sotto i 768px) --- */
+@media (max-width: 768px) {
+    /* Ridimensiona logo header */
+    .logo img {
+        max-height: 45px; /* Logo più proporzionato su smartphone */
+        width: auto;
+    }
+
+    /* Trasforma il footer in colonna singola centrata */
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra gli elementi della colonna */
+        text-align: center;   /* Centra i testi */
+        gap: 30px;
+    }
+
+    /* Gestione specifica per la tua classe .footer-info */
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info img {
+        margin: 0 auto 15px auto; /* Centra il logo nel footer */
+        max-width: 120px;         /* Riduce leggermente il logo nel footer */
+    }
+
+    .footer-socials {
+        justify-content: center; /* Centra le icone social */
+    }
+
+    .footer-links ul {
+        padding: 0;
+        list-style: none;
+    }
+}
