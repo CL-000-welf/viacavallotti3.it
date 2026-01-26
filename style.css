@@ -1,7 +1,8 @@
-/* Importazione Font: Montserrat (corpo) e Playfair Display (titoli) */
+/* --- IMPORTAZIONE FONT E ICONE --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
+/* --- RESET BASE --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
@@ -35,7 +36,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 
 /* --- SEZIONE BENVENUTI (Intro) --- */
 .intro { 
-    padding: 100px 20px; /* Spazio generoso sopra e sotto */
+    padding: 100px 20px; 
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
@@ -54,7 +55,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     line-height: 1.8;
 }
 
-/* --- SHOWCASE 3 FOTO --- */
+/* --- SHOWCASE 3 FOTO (HOME) --- */
 .showcase { padding-bottom: 100px; }
 .showcase-grid { display: grid; grid-template-columns: 1fr; gap: 50px; }
 .showcase-item { text-align: center; }
@@ -66,6 +67,43 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     font-weight: 400; 
     color: #121212;
 }
+
+/* --- PAGINA CONTATTI (RE-DESIGN) --- */
+.contact-page { padding: 80px 25px; }
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 60px; margin-top: 40px; }
+.contact-section { margin-bottom: 40px; }
+.contact-section h3 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 22px; 
+    font-weight: 400; 
+    margin-bottom: 15px; 
+    color: #000;
+}
+.contact-section p { font-size: 16px; color: #333; margin-bottom: 8px; }
+
+/* Rimosso blu dai link */
+.text-link { color: #000; text-decoration: none; transition: 0.3s; border-bottom: 1px solid transparent; }
+.text-link:hover { border-bottom: 1px solid #000; }
+
+/* Bottoni Fashion: Bianchi con bordo e scritte nere */
+.fashion-buttons { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+.btn-fashion { 
+    display: inline-block; 
+    padding: 12px 25px; 
+    border: 1px solid #000; 
+    background: #fff; 
+    color: #000 !important; 
+    text-decoration: none; 
+    font-size: 11px; 
+    letter-spacing: 2px; 
+    font-weight: 500; 
+    transition: 0.3s; 
+}
+.btn-fashion:hover { background: #000; color: #fff !important; }
+
+/* Mappa Sophisticated */
+.map-container { width: 100%; filter: grayscale(100%); transition: 0.5s; border: 1px solid #f2f2f2; }
+.map-container:hover { filter: grayscale(0%); }
 
 /* --- FOOTER NERO --- */
 .dark-footer { background: #000; color: #fff; padding: 80px 0 40px; margin-top: 50px; }
@@ -82,6 +120,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 /* --- RESPONSIVE DESKTOP --- */
 @media (min-width: 768px) {
     .showcase-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .contact-grid { grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
     .footer-grid { grid-template-columns: 1.5fr 1fr; text-align: left; }
     .footer-socials { justify-content: flex-start; }
     .hero-content h1 { font-size: 52px; }
