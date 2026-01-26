@@ -1,6 +1,5 @@
-/* Importazione Font Eleganti */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;300;400&display=swap');
-/* Importazione Icone Social */
+/* Importazione Font: Montserrat (corpo) e Playfair Display (titoli) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,63 +12,78 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
 
-/* Titolo "Benvenute" e Didascalie Foto */
-.fashion-title, .showcase-item h4 { 
-    font-family: 'Playfair Display', serif; 
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: -0.5px;
-}
-
-.fashion-title { font-size: 32px; margin-bottom: 20px; text-align: center; }
-
-/* Header */
+/* --- HEADER --- */
 .top-bar { background: #000; color: #fff; text-align: center; font-size: 10px; padding: 8px; text-transform: uppercase; letter-spacing: 2px; }
-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #f2f2f2; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid #f2f2f2; }
 .logo img { height: 70px; width: auto; }
 .nav-links { display: flex; list-style: none; }
 .nav-links li { margin-left: 20px; }
-.nav-links a { text-decoration: none; color: #000; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 400; }
+.nav-links a { text-decoration: none; color: #000; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; }
 
-/* Hero */
+/* --- HERO --- */
 .hero { 
-    position: relative; height: 60vh; 
+    position: relative; height: 70vh; 
     background: url('assets/hero.jpg') center/cover no-repeat;
     display: flex; align-items: center; justify-content: center; text-align: center; color: #fff;
 }
-.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.25); }
-.hero-content { position: relative; z-index: 1; padding: 0 20px; }
-.hero-content h1 { font-size: 28px; font-weight: 300; margin-bottom: 25px; line-height: 1.2; }
-.btn-outline { display: inline-block; padding: 12px 30px; border: 1px solid #fff; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 11px; letter-spacing: 2px; transition: 0.3s; }
-.btn-outline:hover { background: #fff; color: #000; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); }
+.hero-content { position: relative; z-index: 1; }
+.hero-content h1 { font-size: 32px; font-weight: 300; margin-bottom: 25px; letter-spacing: 1px; }
+.btn-outline { display: inline-block; padding: 12px 30px; border: 1px solid #fff; color: #fff; text-decoration: none; text-transform: uppercase; font-size: 11px; letter-spacing: 2px; }
 
-/* Responsive Showcase Grid */
-.showcase { padding: 60px 0; }
-.showcase-grid { display: flex; flex-direction: column; gap: 40px; }
+/* --- SEZIONE BENVENUTI (Intro) --- */
+.intro { 
+    padding: 100px 20px; /* Spazio generoso sopra e sotto */
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.fashion-title { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 42px; 
+    font-weight: 400; 
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+.intro p {
+    font-size: 17px;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* --- SHOWCASE 3 FOTO --- */
+.showcase { padding-bottom: 100px; }
+.showcase-grid { display: grid; grid-template-columns: 1fr; gap: 50px; }
 .showcase-item { text-align: center; }
-.showcase-item img { width: 100%; height: auto; object-fit: cover; margin-bottom: 15px; }
-.showcase-item h4 { font-size: 24px; color: #121212; }
+.showcase-item img { width: 100%; height: auto; margin-bottom: 20px; filter: grayscale(5%); transition: 0.4s; }
+.showcase-item img:hover { filter: grayscale(0%); transform: translateY(-5px); }
+.showcase-item h4 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 24px; 
+    font-weight: 400; 
+    color: #121212;
+}
 
-/* Footer Nero con Icone */
-.dark-footer { background: #000; color: #fff; padding: 60px 0 30px; }
-.footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; text-align: center; }
-.dark-footer h4 { text-transform: uppercase; font-size: 13px; letter-spacing: 2px; margin-bottom: 20px; font-weight: 400; border-bottom: 1px solid #333; display: inline-block; padding-bottom: 5px; }
-.footer-socials { display: flex; justify-content: center; gap: 25px; margin-top: 15px; }
-.footer-socials a { color: #fff; font-size: 20px; transition: 0.3s; }
-.footer-socials a:hover { color: #999; }
+/* --- FOOTER NERO --- */
+.dark-footer { background: #000; color: #fff; padding: 80px 0 40px; margin-top: 50px; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 50px; text-align: center; }
+.dark-footer h4 { text-transform: uppercase; font-size: 13px; letter-spacing: 2px; margin-bottom: 25px; font-weight: 500; color: #fff; }
+.footer-socials { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; }
+.footer-socials a { color: #fff; font-size: 22px; transition: 0.3s; }
 .footer-links ul { list-style: none; }
 .footer-links li { margin-bottom: 12px; }
-.footer-links a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 300; }
-.footer-bottom { margin-top: 50px; padding-top: 20px; border-top: 1px solid #222; font-size: 10px; color: #777; letter-spacing: 1px; text-align: center; }
+.footer-links a { color: #888; text-decoration: none; font-size: 14px; transition: 0.3s; }
+.footer-links a:hover { color: #fff; }
+.footer-bottom { border-top: 1px solid #222; margin-top: 50px; padding-top: 30px; font-size: 11px; color: #555; text-align: center; }
 
-/* Desktop Adjustment */
+/* --- RESPONSIVE DESKTOP --- */
 @media (min-width: 768px) {
-    .hero { height: 80vh; }
-    .hero-content h1 { font-size: 48px; }
-    .showcase-grid { flex-direction: row; }
-    .showcase-item { flex: 1; }
-    .footer-grid { grid-template-columns: 1fr 1fr; text-align: left; }
+    .showcase-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .footer-grid { grid-template-columns: 1.5fr 1fr; text-align: left; }
     .footer-socials { justify-content: flex-start; }
+    .hero-content h1 { font-size: 52px; }
+    .fashion-title { font-size: 52px; }
 }
