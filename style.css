@@ -130,84 +130,55 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     .hero-content h1 { font-size: 52px; }
     .fashion-title { font-size: 52px; }
 }
-/* --- OTTIMIZZAZIONE MOBILE --- */
+/* --- OTTIMIZZAZIONE MOBILE (Sotto i 768px) --- */
 @media (max-width: 768px) {
-    /* Ridimensiona logo header su mobile */
+    /* Logo Header: lo rimpiccioliamo per il mobile */
     .logo img {
-        max-height: 30px; /* Regola questo valore se lo vuoi ancora più piccolo */
+        max-height: 30px; 
         width: auto;
     }
 
-    /* Centra tutto nel footer su mobile */
+    /* Griglia Footer: diventa una colonna singola centrata */
     .footer-grid {
         display: flex;
         flex-direction: column;
+        align-items: center; 
         text-align: center;
-        gap: 40px;
+        gap: 35px;
     }
 
-    .footer-brand {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centra il logo del footer */
-    }
-
-    .footer-brand img {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer-socials {
-        justify-content: center; /* Centra le icone social */
-        margin-top: 15px;
-    }
-
-    .footer-links ul {
-        padding: 0;
-        list-style: none;
-    }
-    
-    /* Centra anche il testo in basso */
-    .footer-bottom {
-        text-align: center;
-        padding: 20px 10px;
-    }
-}
-/* --- OTTIMIZZAZIONE SOLO MOBILE (Sotto i 768px) --- */
-@media (max-width: 768px) {
-    /* Ridimensiona logo header */
-    .logo img {
-        max-height: 45px; /* Logo più proporzionato su smartphone */
-        width: auto;
-    }
-
-    /* Trasforma il footer in colonna singola centrata */
-    .footer-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centra gli elementi della colonna */
-        text-align: center;   /* Centra i testi */
-        gap: 30px;
-    }
-
-    /* Gestione specifica per la tua classe .footer-info */
+    /* Classe footer-info: centrata solo su mobile */
     .footer-info {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    /* Logo nel Footer: centrato e ridimensionato */
     .footer-info img {
-        margin: 0 auto 15px auto; /* Centra il logo nel footer */
-        max-width: 120px;         /* Riduce leggermente il logo nel footer */
+        margin: 0 auto 15px auto; 
+        max-width: 120px;
+        display: block;
     }
 
+    /* Icone Social: centrate */
     .footer-socials {
-        justify-content: center; /* Centra le icone social */
+        justify-content: center;
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
     }
 
+    /* Link Utili: rimuove padding per centrare bene */
     .footer-links ul {
         padding: 0;
         list-style: none;
+    }
+
+    /* Copyright in fondo: centrato */
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 15px;
+        font-size: 0.85rem;
     }
 }
